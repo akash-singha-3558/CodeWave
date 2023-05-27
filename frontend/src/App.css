@@ -57,6 +57,7 @@ footer a {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 .joinBtn {
@@ -94,7 +95,6 @@ footer a:hover {
 .editorPageParentWrapper {
   display: grid;
   grid-template-columns: 230px 1fr;
-  height: 100vh;
 }
 
 .leftBoxWrap {
@@ -148,4 +148,11 @@ footer a:hover {
   margin-top: 20px;
   background: #8a1fd4;
   color: white;
+}
+
+.CodeMirror{
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
 }
