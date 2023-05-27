@@ -1,4 +1,4 @@
-.HomeDiv {
+.homeDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-.HomeForm {
+.homeForm {
   background: #282a36;
   padding: 20px;
   border-radius: 10px;
@@ -14,8 +14,8 @@
   max-width: 90%;
 }
 
-.HomeForm>img {
-  height: 10 0px;
+.homeForm>img {
+  height: 100px;
   margin-bottom: 30px;
   max-width: 90%;
 }
@@ -29,12 +29,12 @@ footer a {
   color: #8a49ff;
 }
 
-.HomeInputGroup {
+.homeInputGroup {
   display: flex;
   flex-direction: column;
 }
 
-.HomeMainLabel {
+.homeMainLabel {
   margin-bottom: 20px;
   margin-top: 0;
 }
@@ -66,7 +66,8 @@ footer a {
   margin-left: auto;
 }
 
-.joinBtn:hover {
+.joinBtn:hover,
+.leaveBtn:hover {
   background: #8a49ff;
 }
 
@@ -87,4 +88,64 @@ footer a:hover {
 
   color: #8a1fd4;
   border-color: #8a1fd4;
+}
+
+
+.editorPageParentWrapper {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  height: 100vh;
+}
+
+.leftBoxWrap {
+  background: #1c1e29;
+  padding: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.leftBoxInnerWrap {
+  flex: 1;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.logo {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+}
+
+.editorLogoImage {
+  height: 80px;
+  display: block;
+  margin: auto;
+}
+
+.rightBoxWrapEditor {
+  background: white;
+}
+
+.leaveBtn {
+  width: 100%;
+  margin-top: 20px;
+  background: #8a1fd4;
+  color: white;
 }
