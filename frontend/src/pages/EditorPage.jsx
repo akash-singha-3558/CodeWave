@@ -1,10 +1,33 @@
 import React from 'react'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
+import ACTIONS from '../Actions'
 import Client from '../components/Client'
 import Editor from '../components/Editor'
-
+import { initSocket } from '../socket'
+import {useLocation} from "react-router-dom"
 const EditorPage = () => {
   const [clients,setClients]=useState([{socketId:1,userName:"Chuunu"},{socketId:2,userName:"Muunu"}])
+  const socketRef=useRef(null);
+  const location=useLocation();
+
+
+
+useEffect(()=>{
+ const init=async()=>{
+  socketRef.current=await initSocket();
+  // socketRef.current.emit(ACTIONS.JOIN,{
+  //    roomId,
+  //    userName:location.state?.userName
+  // });
+  
+ }
+ 
+ init()
+},[])
+
+
   return (
     <div className='editorPageParentWrapper'>
         <div className='leftBoxWrap'>

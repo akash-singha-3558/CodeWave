@@ -10,23 +10,23 @@ import 'codemirror/addon/hint/show-hint.css';
 import 'codemirror/addon/hint/show-hint';
 import 'codemirror/addon/hint/javascript-hint';
 const Editor = () => {
-    useEffect(()=>{
-      initCodeMirror()
-    },[])
+  useEffect(() => {
+    initCodeMirror()
+  }, [])
 
-    async function initCodeMirror(){
-      CodeMirror.fromTextArea(document.querySelector("#realTimeEditor"),{
-          mode:{name:"javascript",json:true},
-          theme:'dracula',
-          autoCloseTags:true,
-          autoCloseBrackets:true,
-          lineNumbers:true,
-          extraKeys: {
-            'Ctrl-Space': 'autocomplete', // Enable auto-suggestion on Ctrl+Space
-          }
+  async function initCodeMirror() {
+    CodeMirror.fromTextArea(document.querySelector("#realTimeEditor"), {
+      mode: { name: "javascript", json: true },
+      theme: 'dracula',
+      autoCloseTags: true,
+      autoCloseBrackets: true,
+      lineNumbers: true,
+      extraKeys: {
+        'Ctrl-Space': 'autocomplete', // Enable auto-suggestion on Ctrl+Space
+      },
 
-      });
-    }
+    });
+  }
 
   return (
     <textarea id="realTimeEditor">
